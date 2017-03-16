@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		68C9C6221E79550500E05725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C6211E79550500E05725 /* AppDelegate.swift */; };
-		68C9C6241E79550500E05725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C6231E79550500E05725 /* ViewController.swift */; };
 		68C9C6271E79550500E05725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C9C6251E79550500E05725 /* Main.storyboard */; };
 		68C9C62A1E79550500E05725 /* App_Rullo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C6281E79550500E05725 /* App_Rullo.xcdatamodeld */; };
 		68C9C62C1E79550500E05725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C9C62B1E79550500E05725 /* Assets.xcassets */; };
 		68C9C62F1E79550500E05725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C9C62D1E79550500E05725 /* LaunchScreen.storyboard */; };
+		68C9C6371E79551200E05725 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C6361E79551200E05725 /* APIUTILS.swift */; };
+		68C9C6391E79673400E05725 /* ARGamesListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C6381E79673400E05725 /* ARGamesListCollectionViewController.swift */; };
+		68C9C63B1E79674A00E05725 /* ARGameDetailCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C63A1E79674A00E05725 /* ARGameDetailCustomCell.swift */; };
+		68C9C63D1E79676100E05725 /* ARAddNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C63C1E79676100E05725 /* ARAddNewGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68C9C61E1E79550500E05725 /* App_Rullo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_Rullo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C9C6211E79550500E05725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68C9C6231E79550500E05725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68C9C6261E79550500E05725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68C9C6291E79550500E05725 /* App_Rullo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App_Rullo.xcdatamodel; sourceTree = "<group>"; };
 		68C9C62B1E79550500E05725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68C9C62E1E79550500E05725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68C9C6301E79550500E05725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C9C6361E79551200E05725 /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
+		68C9C6381E79673400E05725 /* ARGamesListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARGamesListCollectionViewController.swift; sourceTree = "<group>"; };
+		68C9C63A1E79674A00E05725 /* ARGameDetailCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARGameDetailCustomCell.swift; sourceTree = "<group>"; };
+		68C9C63C1E79676100E05725 /* ARAddNewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAddNewGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				68C9C6211E79550500E05725 /* AppDelegate.swift */,
-				68C9C6231E79550500E05725 /* ViewController.swift */,
+				68C9C63E1E79676600E05725 /* VIEWS_CONTROLLERS */,
+				68C9C6361E79551200E05725 /* APIUTILS.swift */,
 				68C9C6251E79550500E05725 /* Main.storyboard */,
 				68C9C62B1E79550500E05725 /* Assets.xcassets */,
 				68C9C62D1E79550500E05725 /* LaunchScreen.storyboard */,
@@ -65,6 +72,16 @@
 				68C9C6281E79550500E05725 /* App_Rullo.xcdatamodeld */,
 			);
 			path = App_Rullo;
+			sourceTree = "<group>";
+		};
+		68C9C63E1E79676600E05725 /* VIEWS_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				68C9C6381E79673400E05725 /* ARGamesListCollectionViewController.swift */,
+				68C9C63A1E79674A00E05725 /* ARGameDetailCustomCell.swift */,
+				68C9C63C1E79676100E05725 /* ARAddNewGameViewController.swift */,
+			);
+			name = VIEWS_CONTROLLERS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68C9C6241E79550500E05725 /* ViewController.swift in Sources */,
+				68C9C63D1E79676100E05725 /* ARAddNewGameViewController.swift in Sources */,
+				68C9C6371E79551200E05725 /* APIUTILS.swift in Sources */,
+				68C9C63B1E79674A00E05725 /* ARGameDetailCustomCell.swift in Sources */,
 				68C9C6221E79550500E05725 /* AppDelegate.swift in Sources */,
 				68C9C62A1E79550500E05725 /* App_Rullo.xcdatamodeld in Sources */,
+				68C9C6391E79673400E05725 /* ARGamesListCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
