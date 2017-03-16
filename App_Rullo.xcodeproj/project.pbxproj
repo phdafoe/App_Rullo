@@ -324,6 +324,7 @@
 				68C9C6351E79550500E05725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

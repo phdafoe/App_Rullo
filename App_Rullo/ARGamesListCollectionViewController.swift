@@ -25,8 +25,8 @@ class ARGamesListCollectionViewController: UIViewController{
     
     //MARK: - Fase 8 -> Filtro del segment control a traves de una action
     // se hace esto para que cuando realicemos el filtro de los videojuegos prestados a todos debemos realizar nuevamente la consulta
-    @IBAction func filterChangeACTION(_ sender: Any) {
-        
+    @IBAction func filterChangeACTION(_ sender: UISegmentedControl) {
+        performGamesQuery()
     }
     
 
@@ -194,6 +194,25 @@ extension ARGamesListCollectionViewController : UICollectionViewDelegate, UIColl
         
         return customCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //MARK: - FASE 9 -> segues que muestren una vista u otra en el caso de añadir o editar
+        performSegue(withIdentifier: "editGameSegue", sender: self)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //MARK: - FASE 9 -> segues que muestren una vista u otra en el caso de añadir o editar
+        //guardamos un offset / equidistancia entre el borde superior hasta el punto que estamos arrastrando
+        //ademas usamos este metodo scroll por que una tabla y una coleccion es una subclase de scrollView
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < -120{
+            performSegue(withIdentifier: "addGameSegue", sender: self)
+        }
+    }
+    
+    
+    
+    
 }
 
 
@@ -225,6 +244,15 @@ extension String{
                 return distance(from: self.startIndex, to: myRange.lowerBound)
         }
         return nil
+    }
+    
+}
+
+//TODO: - FASE FINAL DELEGADO DE LA VC
+extension ARGamesListCollectionViewController : ARAddNewGameViewControllerDelegate{
+    //Cuando haya un didAddgame
+    func didAddGame() {
+        myCollectionView.reloadData()
     }
     
 }
