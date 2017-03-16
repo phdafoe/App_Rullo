@@ -108,7 +108,6 @@
                                             <outlet property="myBorrowedToLBL" destination="lCM-Zy-0hH" id="qWy-wS-4f6"/>
                                             <outlet property="myImageGame" destination="kPg-Iy-XIS" id="8mR-R9-4aY"/>
                                             <outlet property="myNameGame" destination="YBT-4k-hv3" id="WLj-ef-Aav"/>
-                                            <segue destination="TCQ-Pr-eo3" kind="show" identifier="editGameSegue" id="NM2-oE-Kqx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -125,11 +124,14 @@
                             <constraint firstItem="wOK-vq-n1i" firstAttribute="top" secondItem="SPt-8U-hPw" secondAttribute="bottom" constant="8" id="fZM-sD-wWd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mis juegos" id="N8a-0b-WM9"/>
+                    <navigationItem key="navigationItem" title="Mis juegos" id="N8a-0b-WM9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xaQ-n1-dmy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCollectionView" destination="wOK-vq-n1i" id="c5s-VK-Xbn"/>
                         <outlet property="myFilterSegmentController" destination="SPt-8U-hPw" id="GnL-9i-HgZ"/>
                         <segue destination="ABj-hy-Ct0" kind="presentation" identifier="addGameSegue" id="Efz-fs-sQs"/>
+                        <segue destination="TCQ-Pr-eo3" kind="show" identifier="editGameSegue" id="mp5-Wj-deD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -324,6 +326,6 @@
         <image name="placeholder" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NM2-oE-Kqx"/>
+        <segue reference="mp5-Wj-deD"/>
     </inferredMetricsTieBreakers>
 </document>

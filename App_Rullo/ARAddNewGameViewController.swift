@@ -22,12 +22,8 @@ class ARAddNewGameViewController: UIViewController {
     var manageContext : NSManagedObjectContext?
     var arDelegate : ARAddNewGameViewControllerDelegate?
     var game : Game?
-    var datePicker : UIDatePicker?
-    var dateFormatter : DateFormatter!{
-        didSet{
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-        }
-    }
+    var datePicker : UIDatePicker!
+    var dateFormatter = DateFormatter()
     
     
     
@@ -70,6 +66,8 @@ class ARAddNewGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         
         //Imagen
         myImagenGame.isUserInteractionEnabled = true

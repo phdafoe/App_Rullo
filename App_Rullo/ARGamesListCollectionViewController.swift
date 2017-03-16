@@ -34,6 +34,7 @@ class ARGamesListCollectionViewController: UIViewController{
         super.viewDidLoad()
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
+        myCollectionView.alwaysBounceVertical = true
         
     }
     
@@ -105,6 +106,31 @@ class ARGamesListCollectionViewController: UIViewController{
         }catch{
             print("Error recuperando datos de CoreData")
         }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addGameSegue"{
+            let navVC = segue.destination as! UINavigationController
+            let detalleVC = navVC.topViewController as! ARAddNewGameViewController
+            //set el contexto
+            detalleVC.manageContext = manageContext
+            detalleVC.arDelegate = self
+        }
+        
+        if segue.identifier == "editGameSegue"{
+            
+            let detalleVC = segue.destination as! ARAddNewGameViewController
+            //set el contexto
+            detalleVC.manageContext = manageContext
+            let selectIndex = myCollectionView.indexPathsForSelectedItems?.first?.row
+            let gameInd = listGames[selectIndex!]
+            detalleVC.game = gameInd
+            detalleVC.arDelegate = self
+            
+            
+        }
+        
     }
     
     
@@ -205,7 +231,7 @@ extension ARGamesListCollectionViewController : UICollectionViewDelegate, UIColl
         //guardamos un offset / equidistancia entre el borde superior hasta el punto que estamos arrastrando
         //ademas usamos este metodo scroll por que una tabla y una coleccion es una subclase de scrollView
         let offsetY = scrollView.contentOffset.y
-        if offsetY < -120{
+        if (offsetY < -120){
             performSegue(withIdentifier: "addGameSegue", sender: self)
         }
     }
