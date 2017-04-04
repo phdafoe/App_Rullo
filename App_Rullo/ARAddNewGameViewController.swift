@@ -26,8 +26,6 @@ class ARAddNewGameViewController: UIViewController {
     var dateFormatter = DateFormatter()
     
     
-    
-    
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenGame: UIImageView!
     @IBOutlet weak var mySwitch: UISwitch!
@@ -106,11 +104,11 @@ class ARAddNewGameViewController: UIViewController {
                 mySwitch.isOn = borrowed
             }
             myQuienPrestadoGame.text = game?.borrowedTo
-            if let borrowedDate = game?.borrowedDate as? Date{
+            if let borrowedDate = game?.borrowedDate as Date?{
                 myCuandoPrestadoGame.text = dateFormatter.string(from: borrowedDate)
             }
             
-            if let imageData = game?.image as? Data{
+            if let imageData = game?.image as Data?{
                 myImagenGame.image = UIImage(data: imageData)
             }
             myEliminarVideojuegoBTN.isHidden = false
@@ -196,11 +194,13 @@ class ARAddNewGameViewController: UIViewController {
             if let editedGameDes = editedGame{
                 
                 editedGameDes.dateCreated = NSDate()
+                
                 if let title = self.myTituloGame.text{
                     editedGameDes.title = title
                 }
                 
                 editedGameDes.borrowed = self.mySwitch.isOn
+                
                 if let imageData = myImagenGame.image{
                     editedGameDes.image = UIImagePNGRepresentation(imageData) as NSData?
                 }else{
@@ -209,7 +209,7 @@ class ARAddNewGameViewController: UIViewController {
                 
                 if editedGameDes.borrowed{
                     if let borrowedTo = myQuienPrestadoGame.text{
-                        editedGameDes.borrowedTo = borrowedTo.uppercased()
+                        editedGameDes.borrowedTo = borrowedTo.uppercased() //-> Mayusculas
                     }
                     if let stringDate = myCuandoPrestadoGame.text{
                         editedGameDes.borrowedDate = dateFormatter.date(from: stringDate) as NSDate?
@@ -221,7 +221,7 @@ class ARAddNewGameViewController: UIViewController {
                 
                 //salvar
                 do{
-                    try  context.save()
+                    try context.save()
                     //avisamos al delegado 
                     // esto va a hacer que se ejecute el metodo didAddGame desde la GameViewController si le hemos dicho que implemente ese protocolo
                     self.arDelegate?.didAddGame()
@@ -284,7 +284,6 @@ extension ARAddNewGameViewController : UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imageData = info[UIImagePickerControllerEditedImage] as? UIImage{
             myImagenGame.image = imageData
-            //mySalvarDataBTN.isEnabled = true
         }
         dismiss(animated: true, completion: nil)
     }

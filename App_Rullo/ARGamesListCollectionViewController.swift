@@ -35,7 +35,6 @@ class ARGamesListCollectionViewController: UIViewController{
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         myCollectionView.alwaysBounceVertical = true
-        
     }
     
     //TODO: Fase 8 ->
@@ -80,6 +79,8 @@ class ARGamesListCollectionViewController: UIViewController{
                                                     length: colonPosition + 1))
         return myMutableString
     }
+    
+    
     
     //TODO: -  Fase 7 -> consulta a CoreData
     func performGamesQuery(){
@@ -127,10 +128,7 @@ class ARGamesListCollectionViewController: UIViewController{
             let gameInd = listGames[selectIndex!]
             detalleVC.game = gameInd
             detalleVC.arDelegate = self
-            
-            
         }
-        
     }
     
     
@@ -159,7 +157,7 @@ extension ARGamesListCollectionViewController : UICollectionViewDelegate, UIColl
         }else{
             myCollectionView.backgroundView = UIView()
         }
-        //Siempre retornamos el listado de Juegos .count
+        //Siempre retornamos el listado de Juegos.count
         return listGames.count
     }
     
@@ -192,7 +190,7 @@ extension ARGamesListCollectionViewController : UICollectionViewDelegate, UIColl
         }
         
         
-        if let borrowedDate = gameModel.borrowedDate as? Date{
+        if let borrowedDate = gameModel.borrowedDate as Date?{
             let myDateFormater = DateFormatter()
             myDateFormater.dateFormat = "dd/MM/yyyy"
             myDateFormater.string(from: borrowedDate)
@@ -202,7 +200,7 @@ extension ARGamesListCollectionViewController : UICollectionViewDelegate, UIColl
             customCell.myBorrowedDateLBL.attributedText = formatColors("FECHA: --", myColor: myColorPrestado)
         }
         
-        if let imageGame = gameModel.image as? Data{
+        if let imageGame = gameModel.image as Data?{
             customCell.myImageGame.image = UIImage(data: imageGame)
         }
         
@@ -264,10 +262,13 @@ extension String{
     //el self se refiere a la cadena a la que estamos ejecutando e indexOf
     
     //si encontramos dentro del rango el target (caracter)
-    //retornamos la posicion con un metodo de calculo de la distancia de que posicion a que posicion aqui es fundamental entender que lo que necesito pillar como fin de la cadena seran : a partir de ese punto puedo colorear el resto de caracteres con el metodo lowerBound -> límite inferior
+    /// retornamos la posicion con un metodo de calculo de la distancia de que posicion a que posicion aqui es fundamental entender que lo que necesito pillar como fin de la cadena seran : a partir de ese punto puedo colorear el resto de caracteres con el metodo lowerBound -> límite inferior
+    ///
+    /// - parameter myTarget: myTarget es el String que introduciremos para su analisis de rango
+    /// - returns: -> Int? / lo que buscamos es obtener un int y de ahi podemos gestionar el numero de caracteres
     func indexOf (_ myTarget : String) -> Int?{
         if let myRange = self.range(of: myTarget){
-                return distance(from: self.startIndex, to: myRange.lowerBound)
+            return distance(from: self.startIndex, to: myRange.lowerBound)
         }
         return nil
     }

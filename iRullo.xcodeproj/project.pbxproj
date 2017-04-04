@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		68C9C61E1E79550500E05725 /* App_Rullo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_Rullo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C9C61E1E79550500E05725 /* iRullo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRullo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C9C6211E79550500E05725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C9C6261E79550500E05725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68C9C6291E79550500E05725 /* App_Rullo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App_Rullo.xcdatamodel; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		68C9C61F1E79550500E05725 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68C9C61E1E79550500E05725 /* App_Rullo.app */,
+				68C9C61E1E79550500E05725 /* iRullo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		68C9C61D1E79550500E05725 /* App_Rullo */ = {
+		68C9C61D1E79550500E05725 /* iRullo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68C9C6331E79550500E05725 /* Build configuration list for PBXNativeTarget "App_Rullo" */;
+			buildConfigurationList = 68C9C6331E79550500E05725 /* Build configuration list for PBXNativeTarget "iRullo" */;
 			buildPhases = (
 				68C9C61A1E79550500E05725 /* Sources */,
 				68C9C61B1E79550500E05725 /* Frameworks */,
@@ -99,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = App_Rullo;
+			name = iRullo;
 			productName = App_Rullo;
-			productReference = 68C9C61E1E79550500E05725 /* App_Rullo.app */;
+			productReference = 68C9C61E1E79550500E05725 /* iRullo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,11 +117,11 @@
 					68C9C61D1E79550500E05725 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2C7W4RF846;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 68C9C6191E79550500E05725 /* Build configuration list for PBXProject "App_Rullo" */;
+			buildConfigurationList = 68C9C6191E79550500E05725 /* Build configuration list for PBXProject "iRullo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -134,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68C9C61D1E79550500E05725 /* App_Rullo */,
+				68C9C61D1E79550500E05725 /* iRullo */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +188,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		417E2F2B1E938EC5003F9DA0 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		417E2F2C1E938EC5003F9DA0 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = App_Rullo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iRullo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b59cd998-f301-4cb2-86cb-f09e2847ebbd";
+				PROVISIONING_PROFILE_SPECIFIER = APPRULLOPRO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Distribution;
+		};
 		68C9C6311E79550500E05725 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,8 +344,10 @@
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = App_Rullo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.App-Rullo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iRullo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1defaf7b-1e4d-45e0-8df2-9764d4c07b12";
+				PROVISIONING_PROFILE_SPECIFIER = APPRULLODEV;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -299,8 +359,10 @@
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = App_Rullo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.App-Rullo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iRullo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1defaf7b-1e4d-45e0-8df2-9764d4c07b12";
+				PROVISIONING_PROFILE_SPECIFIER = APPRULLODEV;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -308,20 +370,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		68C9C6191E79550500E05725 /* Build configuration list for PBXProject "App_Rullo" */ = {
+		68C9C6191E79550500E05725 /* Build configuration list for PBXProject "iRullo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68C9C6311E79550500E05725 /* Debug */,
 				68C9C6321E79550500E05725 /* Release */,
+				417E2F2B1E938EC5003F9DA0 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68C9C6331E79550500E05725 /* Build configuration list for PBXNativeTarget "App_Rullo" */ = {
+		68C9C6331E79550500E05725 /* Build configuration list for PBXNativeTarget "iRullo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68C9C6341E79550500E05725 /* Debug */,
 				68C9C6351E79550500E05725 /* Release */,
+				417E2F2C1E938EC5003F9DA0 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

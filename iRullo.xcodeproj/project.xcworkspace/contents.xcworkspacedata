@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:App_Rullo.xcodeproj">
+      location = "self:/Users/andres/Desktop/APPS_CICE/App_Rullo/iRullo.xcodeproj">
    </FileRef>
 </Workspace>
